@@ -1,4 +1,4 @@
-import { Todo } from "@app/(todo)/(domain)/(model)/index";
+import { Todo } from "@app/(todo)/(domain)/(model)/todo_model";
 
 export interface TodoRepository {
     getAllTodo(): Todo[];
