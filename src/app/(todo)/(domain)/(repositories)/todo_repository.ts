@@ -1,6 +1,6 @@
 import { Todo } from "@app/(todo)/(domain)/(model)/todo_model";
 
-export interface TodoRepository {
+export interface TodoRepositories {
     getAllTodo(): Todo[];
     getTodoById(id: number): Todo;
     createTodo(todo: Todo): void;

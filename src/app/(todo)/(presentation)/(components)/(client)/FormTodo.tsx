@@ -1,4 +1,6 @@
-import { createTodo } from "@app/(todo)/(data)/(data_source)/actions";
+import React from 'react'
+import { todoRepositories} from "@app/(todo)/(domain)/(repositories)/todo_repository_implementation"
+import { createTodo } from '../(server)/FormDataController'
 
 /*
   This example requires some changes to your config:
@@ -24,15 +26,28 @@ export default function Example() {
           </div>
           <form className="mt-5 sm:flex sm:items-center" action={createTodo}>
             <div className="w-full sm:max-w-xs">
-              <label htmlFor="email" className="sr-only">
-                Email
+              <label htmlFor="title" className="sr-only">
+                title
               </label>
               <input
-                type="email"
-                name="email"
-                id="email"
+                required
+                type="text"
+                name="title"
+                id="title"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="you@example.com"
+              />
+              <label htmlFor="title" className="sr-only">
+                description
+              </label>
+              <input
+                required
+                type="text"
+                name="title"
+                id="title"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="you@example.com"
+
               />
             </div>
             <button
